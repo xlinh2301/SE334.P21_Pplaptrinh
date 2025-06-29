@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Giám sát</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Danh sách Sự kiện Giám sát</h1>
+
+    <div class="bulk-actions">
+        <button id="delete-selected-btn" disabled>Xóa các mục đã chọn (0)</button>
+        </div>
+
+    <table id="events-table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="select-all-checkbox" title="Chọn/Bỏ chọn tất cả"></th>
+                <th>Thời gian</th>
+                <th>Camera ID</th>
+                <th>Loại Sự kiện</th>
+                <th>Chi tiết</th>
+                <th>Ảnh chụp</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="events-table-body">
+            <tr>
+                <td colspan="7">Đang tải dữ liệu...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

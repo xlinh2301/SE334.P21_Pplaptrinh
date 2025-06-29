@@ -1,0 +1,105 @@
+/* static/style.css */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9e9e9;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td.details {
+    font-size: 0.9em;
+    white-space: pre-wrap; /* Giữ định dạng JSON */
+    word-break: break-all;
+}
+
+td img.snapshot {
+    max-width: 150px; /* Giới hạn chiều rộng ảnh thumbnail */
+    height: auto;
+    display: block; /* Để căn giữa nếu cần */
+    cursor: pointer; /* Thêm con trỏ để biết có thể click */
+}
+
+
+
+button.delete-btn {
+    padding: 3px 8px;
+    background-color: #f44336; /* Màu đỏ */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    
+}
+
+button.delete-btn:hover {
+    background-color: #da190b; /* Đỏ đậm hơn khi hover */
+}
+
+
+.bulk-actions {
+    margin-bottom: 15px;
+}
+
+#delete-selected-btn {
+    padding: 8px 15px;
+    background-color: #dc3545; /* Màu đỏ cảnh báo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#delete-selected-btn:disabled {
+    background-color: #ccc; /* Màu xám khi bị vô hiệu hóa */
+    cursor: not-allowed;
+}
+
+#delete-selected-btn:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+/* Style cho checkbox trong header và rows */
+th input[type="checkbox"],
+td input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px; /* Kích thước tùy chỉnh */
+    height: 16px;
+}
+
+/* (Tùy chọn) Style cho hàng được chọn */
+tr.selected {
+    background-color: #d6eaff !important; /* Màu xanh nhạt làm nổi bật */
+}

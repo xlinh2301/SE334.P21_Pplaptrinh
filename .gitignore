@@ -1,0 +1,27 @@
+# Environments
+myvenv/
+venv/
+.env
+
+myenv
+env_wsl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*~
+
+# Logs
+*.log
+
+# Data / Media
+data/snapshots/
+database/
+yolov8n.pt
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+yolo12x.pt
