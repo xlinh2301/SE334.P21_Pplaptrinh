@@ -5,8 +5,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
 import os
-from contextlib import asynccontextmanager # <<< Thêm dòng này
-from pydantic import BaseModel, Field # <<< Thêm BaseModel, Field từ pydantic
+from contextlib import asynccontextmanager 
+from pydantic import BaseModel, Field 
 from typing import List 
 
 from config import settings
@@ -35,7 +35,6 @@ app.mount("/static", StaticFiles(directory=static_dir), name="static")
 class BulkDeleteRequest(BaseModel):
     event_ids: List[int] = Field(..., min_length=1)
 
-# --- Các endpoint còn lại giữ nguyên ---
 @app.get("/")
 async def read_ui(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
