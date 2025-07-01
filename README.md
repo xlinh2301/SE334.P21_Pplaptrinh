@@ -147,11 +147,10 @@ Bạn có thể định cấu hình một danh sách các video để xử lý c
 
 ### Phát hiện và Tracking đối tượng
 
-- **Model**: Sử dụng YOLOv8 với model `yolo12x.pt`
+- **Model**: Sử dụng YOLO12 với model `yolo12x.pt`
 - **Tracking**: ByteTrack để theo dõi đối tượng qua các frame
 - **Đối tượng quan tâm**: Mặc định phát hiện người (`person`)
 - **Ngưỡng tin cậy**: Có thể điều chỉnh trong `config/settings.py`
-- **Cooldown**: Tránh spam cảnh báo cho cùng một đối tượng
 
 ### Cảnh báo Email
 
@@ -165,7 +164,6 @@ Bạn có thể định cấu hình một danh sách các video để xử lý c
 - **Dashboard**: Hiển thị danh sách sự kiện theo thời gian thực
 - **Ảnh chụp**: Xem ảnh snapshot khi có sự kiện
 - **Quản lý**: Xóa sự kiện đơn lẻ hoặc hàng loạt
-- **Auto-refresh**: Cập nhật dữ liệu mỗi 5 giây
 
 ### API Endpoints
 
@@ -184,7 +182,6 @@ Bảng `events` chứa:
 - `event_type`: Loại sự kiện
 - `object_details`: Chi tiết đối tượng (JSON)
 - `confidence`: Độ tin cậy
-- `zone`: Khu vực (nếu có)
 - `snapshot_path`: Đường dẫn ảnh chụp
 
 ## Cấu hình nâng cao
@@ -199,12 +196,6 @@ DETECTION_CONFIDENCE_THRESHOLD = 0.8
 
 # Đối tượng quan tâm
 INTERESTING_OBJECT_CLASSES = ['person']
-
-# Thời gian cooldown giữa các cảnh báo (giây)
-ALERT_COOLDOWN_SECONDS = 30
-
-# Ngưỡng diện tích pixel tối thiểu cho chuyển động
-MIN_MOTION_CONTOUR_AREA = 700
 ```
 
 ### Cấu hình Redis

@@ -76,8 +76,10 @@ function getSelectedEventIds() {
 async function fetchAndDisplayEvents() {
     if (!eventsTableBody) return;
 
+    const url = '/api/events?limit=50';
+
     try {
-        const response = await fetch('/api/events?limit=50');
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -196,7 +198,6 @@ async function deleteSelectedEvents() {
          updateBulkActionState();
     }
 }
-
 
 function setupEventListeners() {
     if (eventsTableBody) {
